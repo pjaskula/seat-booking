@@ -104,3 +104,11 @@ body {
     }
   }
 }
+
+p.text {
+  margin: 5px 0;
+
+  span {
+    color: $clr-selected-seat;
+  }
+}

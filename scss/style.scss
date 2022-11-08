@@ -32,6 +32,27 @@ body {
   }
 }
 
+.showcase {
+  background: rgba(0, 0, 0, .3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: darken($color: $clr-primary, $amount: 10%);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+
+    small { 
+      margin-left: 2px;
+    }
+  }
+}
+
 .seat {
   background-color: $clr-free-seat;
   height: $seat-height;
@@ -49,8 +70,19 @@ body {
   }
 }
 
-
 .container {
+
+  perspective: 200px;
+  margin-bottom: 20px;
+
+  .screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-20deg);
+    box-shadow: 0 7px 10px rgba(255, 255, 255, .3);
+  }
 
   .row {
     display: flex;
@@ -63,6 +95,11 @@ body {
 
       &:nth-last-of-type(3) {
         margin-left: $path-width;
+      }
+
+      &:not(.occupied):hover {
+        cursor: pointer;
+        transform: scale(1.2);
       }
     }
   }
